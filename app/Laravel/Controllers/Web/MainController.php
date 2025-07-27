@@ -2,6 +2,8 @@
 
 namespace App\Laravel\Controllers\Web;
 
+use App\Laravel\Requests\PageRequest;
+
 class MainController extends Controller{
     protected $data;
 
@@ -9,7 +11,7 @@ class MainController extends Controller{
 
     }
 
-    public function index(){
+    public function index(PageRequest $request){
         return inertia('Web/Index');
     }
 }
